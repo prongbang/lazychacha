@@ -48,7 +48,8 @@ clientSharedKey, _ := clientKx.Secret()
 
 ```go
 lazyChacha := lazychacha.New()
-key, _ := lazyChacha.RandomKey()
+sharedKey, _ := clientKx.Secret()
+key, _ := hex.DecodeString(sharedKey)
 plaintext := "text"
 ciphertext, err := lazyChacha.Encrypt(plaintext, key)
 ```
@@ -57,7 +58,8 @@ ciphertext, err := lazyChacha.Encrypt(plaintext, key)
 
 ```go
 lazyChacha := lazychacha.New()
-key := "e7de22e8"
+sharedKey, _ := clientKx.Secret()
+key, _ := hex.DecodeString(sharedKey)
 ciphertext := "f6a1bd8"
 plaintext, err := lazyChacha.Decrypt(ciphertext, key)
 ```
