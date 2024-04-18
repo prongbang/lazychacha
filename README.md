@@ -1,6 +1,6 @@
 # lazychacha
 
-Lazy ChaCha20-Poly1305 in golang.
+Lazy ChaCha20-Poly1305 in golang on [golang.org/x/crypto](golang.org/x/crypto).
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/prongbang/lazychacha)](https://goreportcard.com/report/github.com/prongbang/lazychacha)
 
