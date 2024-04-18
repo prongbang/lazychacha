@@ -58,7 +58,7 @@ ciphertext, err := lazyChacha.Encrypt(plaintext, key)
 
 ```go
 lazyChacha := lazychacha.New()
-sharedKey, _ := clientKx.Secret()
+sharedKey, _ := serverKx.Secret()
 key, _ := hex.DecodeString(sharedKey)
 ciphertext := "f6a1bd8"
 plaintext, err := lazyChacha.Decrypt(ciphertext, key)
